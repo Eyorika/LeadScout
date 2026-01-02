@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadScout</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LeadScout</h1>
+            <nav class="tabs">
+                <button id="tab-add" class="active">Add Lead</button>
+                <button id="tab-list">My Leads</button>
+            </nav>
+        </header>
+
+        <main id="view-add" class="view active">
+            <div class="form-group">
+                <label for="input-name">Name</label>
+                <input type="text" id="input-name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="input-role">Role</label>
+                <input type="text" id="input-role" placeholder="CEO, Engineer...">
+            </div>
+            <div class="form-group">
+                <label for="input-company">Company</label>
+                <input type="text" id="input-company" placeholder="Acme Corp">
+            </div>
+            <div class="form-group">
+                <label for="input-url">Profile URL</label>
+                <input type="text" id="input-url" readonly>
+            </div>
+            <button id="btn-save" class="btn-primary">Save Lead</button>
+            <div id="status-msg"></div>
+        </main>
+
+        <main id="view-list" class="view">
+            <div class="list-controls">
+                <button id="btn-export" class="btn-secondary">Export content (CSV)</button>
+                <button id="btn-clear" class="btn-danger">Clear All</button>
+            </div>
+            <div id="leads-container">
+                <!-- Leads will be injected here -->
+                <div class="empty-state">No leads saved yet.</div>
+            </div>
+        </main>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# OS junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node (if added later)
+node_modules/
+npm-debug.log
+
+# Extension artifacts
+*.pem
+*.crx
